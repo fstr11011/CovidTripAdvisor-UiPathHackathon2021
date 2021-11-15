@@ -1,0 +1,195 @@
+{
+  "entities": [
+    {
+      "name": "TripSummary",
+      "displayName": "TripSummary",
+      "entityTypeId": 0,
+      "entityType": "Entity",
+      "description": "",
+      "fields": [
+        {
+          "name": "DeptAddInfo",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isUnique": false,
+          "referenceType": "ManyToOne",
+          "sqlType": {
+            "name": "NVARCHAR",
+            "lengthLimit": 200
+          },
+          "isRequired": false,
+          "displayName": "Dept-AddInfo",
+          "description": "",
+          "isSystemField": false,
+          "fieldDisplayType": "Basic",
+          "isAttachment": false,
+          "isRbacEnabled": false
+        },
+        {
+          "name": "DeptForms",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isUnique": false,
+          "referenceType": "ManyToOne",
+          "sqlType": {
+            "name": "NVARCHAR",
+            "lengthLimit": 200
+          },
+          "isRequired": false,
+          "displayName": "Dept-Forms",
+          "description": "",
+          "isSystemField": false,
+          "fieldDisplayType": "Basic",
+          "isAttachment": false,
+          "isRbacEnabled": false
+        },
+        {
+          "name": "DepartureLocation",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isUnique": false,
+          "referenceType": "ManyToOne",
+          "sqlType": {
+            "name": "NVARCHAR",
+            "lengthLimit": 200
+          },
+          "isRequired": true,
+          "displayName": "Dept-Location",
+          "description": "",
+          "isSystemField": false,
+          "fieldDisplayType": "Basic",
+          "isAttachment": false,
+          "isRbacEnabled": false
+        },
+        {
+          "name": "DeptTravelRestricts",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isUnique": false,
+          "referenceType": "ManyToOne",
+          "sqlType": {
+            "name": "NVARCHAR",
+            "lengthLimit": 200
+          },
+          "isRequired": false,
+          "displayName": "Dept-TravelRestricts",
+          "description": "",
+          "isSystemField": false,
+          "fieldDisplayType": "Basic",
+          "isAttachment": false,
+          "isRbacEnabled": false
+        },
+        {
+          "name": "DeptVisaInfo",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isUnique": false,
+          "referenceType": "ManyToOne",
+          "sqlType": {
+            "name": "NVARCHAR",
+            "lengthLimit": 200
+          },
+          "isRequired": false,
+          "displayName": "Dept-VisaInfo",
+          "description": "",
+          "isSystemField": false,
+          "fieldDisplayType": "Basic",
+          "isAttachment": false,
+          "isRbacEnabled": false
+        },
+        {
+          "name": "RetAddInfo",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isUnique": false,
+          "referenceType": "ManyToOne",
+          "sqlType": {
+            "name": "NVARCHAR",
+            "lengthLimit": 200
+          },
+          "isRequired": false,
+          "displayName": "Ret-AddInfo",
+          "description": "",
+          "isSystemField": false,
+          "fieldDisplayType": "Basic",
+          "isAttachment": false,
+          "isRbacEnabled": false
+        },
+        {
+          "name": "RetForms",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isUnique": false,
+          "referenceType": "ManyToOne",
+          "sqlType": {
+            "name": "NVARCHAR",
+            "lengthLimit": 200
+          },
+          "isRequired": false,
+          "displayName": "Ret-Forms",
+          "description": "",
+          "isSystemField": false,
+          "fieldDisplayType": "Basic",
+          "isAttachment": false,
+          "isRbacEnabled": false
+        },
+        {
+          "name": "ReturnLocation",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isUnique": false,
+          "referenceType": "ManyToOne",
+          "sqlType": {
+            "name": "NVARCHAR",
+            "lengthLimit": 200
+          },
+          "isRequired": true,
+          "displayName": "Ret-Location",
+          "description": "",
+          "isSystemField": false,
+          "fieldDisplayType": "Basic",
+          "isAttachment": false,
+          "isRbacEnabled": false
+        },
+        {
+          "name": "RetTravelRestricts",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isUnique": false,
+          "referenceType": "ManyToOne",
+          "sqlType": {
+            "name": "NVARCHAR",
+            "lengthLimit": 200
+          },
+          "isRequired": false,
+          "displayName": "Ret-TravelRestricts",
+          "description": "",
+          "isSystemField": false,
+          "fieldDisplayType": "Basic",
+          "isAttachment": false,
+          "isRbacEnabled": false
+        },
+        {
+          "name": "RetVisainfo",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isUnique": false,
+          "referenceType": "ManyToOne",
+          "sqlType": {
+            "name": "NVARCHAR",
+            "lengthLimit": 200
+          },
+          "isRequired": false,
+          "displayName": "Ret-Visainfo",
+          "description": "",
+          "isSystemField": false,
+          "fieldDisplayType": "Basic",
+          "isAttachment": false,
+          "isRbacEnabled": false
+        }
+      ],
+      "isRbacEnabled": false
+    }
+  ],
+  "choicesets": []
+}
