@@ -15,7 +15,7 @@
           "referenceType": "ManyToOne",
           "sqlType": {
             "name": "NVARCHAR",
-            "lengthLimit": 200
+            "lengthLimit": 2000
           },
           "isRequired": false,
           "displayName": "Dept-AddInfo",
@@ -33,7 +33,7 @@
           "referenceType": "ManyToOne",
           "sqlType": {
             "name": "NVARCHAR",
-            "lengthLimit": 200
+            "lengthLimit": 2000
           },
           "isRequired": false,
           "displayName": "Dept-Forms",
@@ -51,7 +51,7 @@
           "referenceType": "ManyToOne",
           "sqlType": {
             "name": "NVARCHAR",
-            "lengthLimit": 200
+            "lengthLimit": 500
           },
           "isRequired": true,
           "displayName": "Dept-Location",
@@ -69,7 +69,7 @@
           "referenceType": "ManyToOne",
           "sqlType": {
             "name": "NVARCHAR",
-            "lengthLimit": 200
+            "lengthLimit": 2000
           },
           "isRequired": false,
           "displayName": "Dept-TravelRestricts",
@@ -87,7 +87,7 @@
           "referenceType": "ManyToOne",
           "sqlType": {
             "name": "NVARCHAR",
-            "lengthLimit": 200
+            "lengthLimit": 2000
           },
           "isRequired": false,
           "displayName": "Dept-VisaInfo",
@@ -105,7 +105,7 @@
           "referenceType": "ManyToOne",
           "sqlType": {
             "name": "NVARCHAR",
-            "lengthLimit": 200
+            "lengthLimit": 2000
           },
           "isRequired": false,
           "displayName": "Ret-AddInfo",
@@ -123,7 +123,7 @@
           "referenceType": "ManyToOne",
           "sqlType": {
             "name": "NVARCHAR",
-            "lengthLimit": 200
+            "lengthLimit": 2000
           },
           "isRequired": false,
           "displayName": "Ret-Forms",
@@ -141,7 +141,7 @@
           "referenceType": "ManyToOne",
           "sqlType": {
             "name": "NVARCHAR",
-            "lengthLimit": 200
+            "lengthLimit": 2000
           },
           "isRequired": true,
           "displayName": "Ret-Location",
@@ -159,7 +159,7 @@
           "referenceType": "ManyToOne",
           "sqlType": {
             "name": "NVARCHAR",
-            "lengthLimit": 200
+            "lengthLimit": 2000
           },
           "isRequired": false,
           "displayName": "Ret-TravelRestricts",
@@ -170,17 +170,17 @@
           "isRbacEnabled": false
         },
         {
-          "name": "RetVisainfo",
+          "name": "StartEnd",
           "isPrimaryKey": false,
           "isForeignKey": false,
           "isUnique": false,
           "referenceType": "ManyToOne",
           "sqlType": {
             "name": "NVARCHAR",
-            "lengthLimit": 200
+            "lengthLimit": 500
           },
           "isRequired": false,
-          "displayName": "Ret-Visainfo",
+          "displayName": "StartEnd",
           "description": "",
           "isSystemField": false,
           "fieldDisplayType": "Basic",

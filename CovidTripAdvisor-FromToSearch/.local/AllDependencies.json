@@ -7701,15 +7701,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MichaelGladstein\\.nuget\\packages\\": {}
+    "C:\\Users\\ThomasMitchell\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "CovidTripAdvisor-FromToSearch",
       "projectName": "CovidTripAdvisor-FromToSearch",
-      "projectPath": "C:\\Users\\MichaelGladstein\\GitHub-Repos\\CovidTripAdvisor-UiPathHackathon2021\\CovidTripAdvisor-FromToSearch\\.local",
-      "packagesPath": "C:\\Users\\MichaelGladstein\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MichaelGladstein\\GitHub-Repos\\CovidTripAdvisor-UiPathHackathon2021\\CovidTripAdvisor-FromToSearch\\.local"
+      "projectPath": "C:\\Users\\ThomasMitchell\\Documents\\UiPath\\CovidTripAdvisor-UiPathHackathon2021\\CovidTripAdvisor-UiPathHackathon2021\\CovidTripAdvisor-FromToSearch\\.local",
+      "packagesPath": "C:\\Users\\ThomasMitchell\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ThomasMitchell\\Documents\\UiPath\\CovidTripAdvisor-UiPathHackathon2021\\CovidTripAdvisor-UiPathHackathon2021\\CovidTripAdvisor-FromToSearch\\.local"
     },
     "frameworks": {
       "net461": {
@@ -7740,7 +7740,7 @@
             "version": "[21.10.3, 21.10.3]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\UiPath\\Studio\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\ThomasMitchell\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
       }
     },
     "runtimes": {

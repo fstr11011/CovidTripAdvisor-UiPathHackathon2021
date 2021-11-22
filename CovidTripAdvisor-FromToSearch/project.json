@@ -10,10 +10,17 @@
     "UiPath.UIAutomation.Activities": "[21.10.3]"
   },
   "webServices": [],
-  "entitiesStores": [],
+  "entitiesStores": [
+    {
+      "serviceDocument": ".entities/EntitiesStore.json",
+      "tenantName": "RoboyoDefault",
+      "namespace": "CovidTripAdvisor_FromToSearch",
+      "uniqueReference": "kfyeUDQGGbx1cWF70s2k5ZeJGBV+gaP7yHgs/mNtnP8="
+    }
+  ],
   "schemaVersion": "4.0",
   "studioVersion": "21.10.3.0",
-  "projectVersion": "1.0.0",
+  "projectVersion": "1.0.9",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
