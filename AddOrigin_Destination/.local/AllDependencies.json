@@ -7573,9 +7573,9 @@
     "restore": {
       "projectUniqueName": "AddOrigin_Destination",
       "projectName": "AddOrigin_Destination",
-      "projectPath": "C:\\Users\\ThomasMitchell\\Documents\\UiPath\\AddOrigin_Destination\\.local",
+      "projectPath": "C:\\Users\\ThomasMitchell\\Documents\\UiPath\\CovidTripAdvisor-UiPathHackathon2021\\CovidTripAdvisor-UiPathHackathon2021\\AddOrigin_Destination\\.local",
       "packagesPath": "C:\\Users\\ThomasMitchell\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ThomasMitchell\\Documents\\UiPath\\AddOrigin_Destination\\.local"
+      "outputPath": "C:\\Users\\ThomasMitchell\\Documents\\UiPath\\CovidTripAdvisor-UiPathHackathon2021\\CovidTripAdvisor-UiPathHackathon2021\\AddOrigin_Destination\\.local"
     },
     "frameworks": {
       "net461": {

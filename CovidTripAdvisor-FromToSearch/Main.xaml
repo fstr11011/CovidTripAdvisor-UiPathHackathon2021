@@ -48,7 +48,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="66">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -82,6 +82,7 @@
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="917,2765" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -110,37 +111,33 @@
     <ui:ReportStatus DisplayName="Report Status" sap:VirtualizedContainerService.HintSize="875,66" sap2010:WorkflowViewState.IdRef="ReportStatus_1" StatusText="[&quot;Validating user input...&quot;]" />
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ValidateUserInput workflow" sap:VirtualizedContainerService.HintSize="875,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\ValidateUserInput.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Date.Now.Date.ToString" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Date.Now.AddDays(14).Date.ToString" />
-        </InArgument>
-        <OutArgument x:TypeArguments="s:DateTime" x:Key="out_StartDate">
-          <mva:VisualBasicReference x:TypeArguments="s:DateTime" ExpressionText="startDate" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="s:DateTime" x:Key="out_EndDate">
-          <mva:VisualBasicReference x:TypeArguments="s:DateTime" ExpressionText="endDate" />
-        </OutArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="io_FromLocation">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="in_FromLocation" />
-        </InOutArgument>
-        <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_ListOfDestinations">
-          <mva:VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="in_ListOfDestinations" />
-        </InArgument>
-        <OutArgument x:TypeArguments="scg:List(x:String)" x:Key="out_ListOfDesinations">
-          <mva:VisualBasicReference x:TypeArguments="scg:List(x:String)" ExpressionText="in_ListOfDestinations" />
-        </OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[Date.Now.Date.ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[Date.Now.AddDays(14).Date.ToString]</InArgument>
+        <OutArgument x:TypeArguments="s:DateTime" x:Key="out_StartDate">[startDate]</OutArgument>
+        <OutArgument x:TypeArguments="s:DateTime" x:Key="out_EndDate">[endDate]</OutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="io_FromLocation">[in_FromLocation]</InOutArgument>
+        <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_ListOfDestinations">[in_ListOfDestinations]</InArgument>
+        <OutArgument x:TypeArguments="scg:List(x:String)" x:Key="out_ListOfDesinations">[in_ListOfDestinations]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:ReportStatus DisplayName="Report Status" sap:VirtualizedContainerService.HintSize="875,66" sap2010:WorkflowViewState.IdRef="ReportStatus_2" StatusText="[&quot;Conducting search...&quot;]" />
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CompleteSherpaSearch workflow" sap:VirtualizedContainerService.HintSize="875,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Workflows\CompleteSherpaSearch.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="s:DateTime" x:Key="in_StartDate">[CDATE(in_StartDate)]</InArgument>
-        <InArgument x:TypeArguments="s:DateTime" x:Key="in_EndDate">[CDATE(in_EndDate)]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_FromLocation">[in_FromLocation]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_ToLocation">[in_ListOfDestinations(0).ToString]</InArgument>
-        <InArgument x:TypeArguments="x:Boolean" x:Key="in_Vaccinated">[in_Vaccinated]</InArgument>
+        <InArgument x:TypeArguments="s:DateTime" x:Key="in_StartDate">
+          <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="CDATE(in_StartDate)" />
+        </InArgument>
+        <InArgument x:TypeArguments="s:DateTime" x:Key="in_EndDate">
+          <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="CDATE(in_StartDate).AddDays(14)" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_FromLocation">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_FromLocation" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_ToLocation">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_ListOfDestinations(0).ToString" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:Boolean" x:Key="in_Vaccinated">
+          <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="in_Vaccinated" />
+        </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:ReportStatus DisplayName="Report Status" sap:VirtualizedContainerService.HintSize="875,66" sap2010:WorkflowViewState.IdRef="ReportStatus_3" StatusText="[&quot;Capturing and reporting findings...&quot;]" />
@@ -224,27 +221,13 @@
             </ui:InvokeWorkflowFile>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke FormatResults workflow" sap:VirtualizedContainerService.HintSize="797,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Workflows\FormatResults.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InOutArgument x:TypeArguments="x:String" x:Key="ReturnAddInfo">
-                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ReturnAddInfo" />
-                </InOutArgument>
-                <InOutArgument x:TypeArguments="x:String" x:Key="TravelRestrictions">
-                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="TravelRestrictions" />
-                </InOutArgument>
-                <InOutArgument x:TypeArguments="x:String" x:Key="Forms">
-                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Forms" />
-                </InOutArgument>
-                <InOutArgument x:TypeArguments="x:String" x:Key="AddInfo">
-                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="AddInfo" />
-                </InOutArgument>
-                <InOutArgument x:TypeArguments="x:String" x:Key="ReturnTravelRestrictions">
-                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ReturnTravelRestrictions" />
-                </InOutArgument>
-                <InOutArgument x:TypeArguments="x:String" x:Key="ReturnForms">
-                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ReturnForms" />
-                </InOutArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="in_Index">
-                  <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="Index" />
-                </InArgument>
+                <InOutArgument x:TypeArguments="x:String" x:Key="ReturnAddInfo">[ReturnAddInfo]</InOutArgument>
+                <InOutArgument x:TypeArguments="x:String" x:Key="TravelRestrictions">[TravelRestrictions]</InOutArgument>
+                <InOutArgument x:TypeArguments="x:String" x:Key="Forms">[Forms]</InOutArgument>
+                <InOutArgument x:TypeArguments="x:String" x:Key="AddInfo">[AddInfo]</InOutArgument>
+                <InOutArgument x:TypeArguments="x:String" x:Key="ReturnTravelRestrictions">[ReturnTravelRestrictions]</InOutArgument>
+                <InOutArgument x:TypeArguments="x:String" x:Key="ReturnForms">[ReturnForms]</InOutArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="in_Index">[Index]</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
             <If Condition="[Index &gt; 0]" sap:VirtualizedContainerService.HintSize="797,362" sap2010:WorkflowViewState.IdRef="If_2">
